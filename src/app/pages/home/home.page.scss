@@ -1,0 +1,410 @@
+/* ============================
+   Default Styles for Larger Screens
+   (Desktops and Larger Tablets)
+   ============================ */
+   .title-div {
+    width: 100%;
+    background-color: var(--ion-color-primary);
+    color: #ffffff;
+    text-align: center;
+    padding-top: 20px;
+    min-width: 320px;
+  
+    .title-content-div {
+      margin: auto;
+    }
+  
+    h1 {
+      margin-top: 10px;
+      font-size: 56px;
+      line-height: 67.2px;
+      font-weight: 900;
+    }
+  
+    p {
+      line-height: 36px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  
+    img {
+      max-width: 100%;
+      margin: auto;
+      display: block;
+      height: 55vh;
+    }
+  
+    .subscribe-btn {
+      --background: white; /* Button background color */
+      --border-width: 2px; /* Border width */
+      --color: #896af9; /* Button text color */
+      font-weight: bold; /* Bold text */
+      border-radius: 8px; /* Rounded corners */
+      transition: none; /* Disable transition effects */
+      box-shadow: 2px 3px 0px 1px #896af9; /* Button shadow */
+      --background-hover: #896af9; /* Hover effect */
+      --background-activated: #ccbefd; /* Hover effect */
+      --background-focused: #896af9; /* Hover effect */
+      --color-hover: white; /* Text color on hover */
+      --color-activated: #896af9; /* Text color on hover */
+      --color-focused: #896af9; /* Text color on hover */
+      margin: 20px 0; /* Vertical spacing */
+    }
+  
+    /* ============================
+       Media Queries for All Screen Sizes
+       ============================ */
+  
+    /* Large Tablets (Between 1025px and 1280px) */
+    @media (min-width: 1025px) and (max-width: 1280px) {
+      .title-div {
+        padding-top: 30px;
+      }
+  
+      .title-content-div {
+        width: 900px;
+      }
+  
+      h1 {
+        font-size: 60px;
+        line-height: 72px;
+      }
+  
+      p {
+        font-size: 26px;
+      }
+  
+      img {
+        height: 60vh;
+      }
+    }
+  
+    /* Tablet Portrait (768px to 1024px) */
+    @media (max-width: 1024px) and (min-width: 768px) {
+      .title-div {
+        padding-top: 10px;
+      }
+  
+      .title-content-div {
+        width: 75%;
+        padding: 0px 70px;
+      }
+  
+      h1 {
+        font-size: 48px;
+        line-height: 58px;
+      }
+  
+      p {
+        font-size: 22px;
+      }
+  
+      img {
+        height: 40vh;
+      }
+    }
+  
+    /* Medium Screens (Between 481px and 768px) */
+    @media (max-width: 768px) and (min-width: 481px) {
+      .title-div {
+        padding-top: 15px;
+      }
+  
+      .title-content-div {
+        width: 100%;
+        padding: 0px 50px;
+      }
+  
+      h1 {
+        font-size: 44px;
+        line-height: 52px;
+      }
+  
+      p {
+        font-size: 20px;
+        line-height: 28px;
+      }
+  
+      .subscribe-btn {
+        width: 50%;
+      }
+  
+      img {
+        height: 45vh;
+      }
+    }
+  
+    /* Small Screens: Mobile Phones (480px and below) */
+    @media (max-width: 480px) and (min-width: 321px) {
+      height: 100vh;
+  
+      .title-div {
+        height: 100vh;
+        padding-top: 65px;
+      }
+  
+      .title-content-div {
+        width: 100%;
+        padding: 0 32px;
+      }
+  
+      h1 {
+        margin-top: 0;
+        font-size: 40px;
+        line-height: 48px;
+      }
+  
+      p {
+        line-height: 30px;
+        font-size: 20px;
+      }
+  
+      .subscribe-btn {
+        width: 45%;
+      }
+  
+      img {
+        padding: 0px 2%;
+        height: auto;
+      }
+    }
+  
+    /* Extra Small Screens: Very Narrow Devices (< 320px) */
+    @media (max-width: 320px) {
+      .title-div {
+        padding-top: 60px;
+      }
+  
+      h1 {
+        font-size: 32px;
+        line-height: 40px;
+      }
+  
+      p {
+        font-size: 18px;
+        line-height: 26px;
+      }
+  
+      img {
+        height: auto;
+      }
+  
+      .subscribe-btn {
+        width: 60%;
+      }
+    }
+  
+    /* Media Queries for Very Large Screens (Larger than 1280px) */
+    @media (min-width: 1281px) {
+      .title-div {
+        padding-top: 30px;
+      }
+  
+      .title-content-div {
+        width: 900px;
+      }
+  
+      h1 {
+        font-size: 72px;
+        line-height: 86px;
+      }
+  
+      p {
+        font-size: 32px;
+      }
+  
+      img {
+        height: 70vh;
+      }
+    }
+  }
+  
+  /* ============================
+     "How It Works" Section Styles
+     ============================ */
+  .how-it-works {
+    width: 100%;
+    background: url(../../../assets/images/steps-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+  
+    h2 {
+      font-size: 48px;
+      line-height: 57.6px;
+      width: 45%;
+      margin: auto;
+      display: block;
+      padding-top: 50px;
+      font-weight: 700;
+    }
+  
+    .discover-txt {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 0;
+      padding-top: 100px;
+    }
+  
+    .subscrip-tite {
+      width: 55%;
+      margin: auto;
+      margin-top: 39px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  
+    /* Media Queries for "How It Works" section */
+    @media (max-width: 1024px) and (min-width: 768px) {
+      h2 {
+        font-size: 40px;
+        line-height: 48px;
+        width: 50%;
+      }
+  
+      .subscrip-tite {
+        width: 60%;
+      }
+    }
+  
+    @media (max-width: 768px) and (min-width: 481px) {
+      h2 {
+        font-size: 36px;
+        line-height: 43.2px;
+        width: 70%;
+      }
+  
+      .subscrip-tite {
+        width: 70%;
+      }
+    }
+  
+    @media (max-width: 480px) and (min-width: 321px) {
+      h2 {
+        font-size: 30px;
+        line-height: 36px;
+        width: 80%;
+      }
+  
+      .subscrip-tite {
+        width: 80%;
+      }
+    }
+  
+    @media (max-width: 320px) {
+      h2 {
+        font-size: 24px;
+        line-height: 32px;
+        width: 100%;
+      }
+  
+      .subscrip-tite {
+        width: 100%;
+      }
+    }
+  }
+  
+  /* ============================
+     Steps Section Styles
+     ============================ */
+  .steps {
+    text-align: center;
+  
+    h3 {
+      font-size: 23px;
+      line-height: 31px;
+    }
+  
+    img {
+      width: 96px;
+      height: 96px;
+    }
+  
+    .step-row {
+      width: 80%;
+      margin: auto;
+      margin-top: 65px;
+    }
+  
+    .subscribe-btn {
+      --background: white; /* Button background color */
+      --border-width: 2px; /* Border width */
+      --color: #896af9; /* Button text color */
+      font-weight: bold; /* Bold text */
+      border-radius: 8px; /* Rounded corners */
+      transition: none; /* Disable transition effects */
+      box-shadow: 2px 3px 0px 1px #896af9; /* Button shadow */
+      --background-hover: #896af9; /* Hover effect */
+      --background-activated: #ccbefd; /* Hover effect */
+      --background-focused: #896af9; /* Hover effect */
+      --color-hover: white; /* Text color on hover */
+      --color-activated: #896af9; /* Text color on hover */
+      --color-focused: #896af9; /* Text color on hover */
+      margin: 50px 0 150px 0;
+    }
+  }
+  
+  /* ============================
+     Footer Section Styles
+     ============================ */
+  .app-footer {
+    background-color: #fff;
+    padding: 20px 0;
+    min-width: 320px;
+  
+    .footer-line {
+      border: none;
+      border-top: 1px solid #eaeaea;
+      margin: 0 0 15px 0;
+    }
+  
+    .footer-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  
+    .footer-content {
+      display: flex;
+      justify-content: space-between; /* Align links on the left and copyright on the right */
+      align-items: start;
+  
+      @media (max-width: 768px) {
+        flex-direction: column; /* Stack vertically on small screens */
+        text-align: left; /* Ensure everything is left-aligned */
+      }
+    }
+  
+    .footer-links {
+      display: flex;
+      flex-direction: column; /* Each link on a new line for small screens */
+  
+      a {
+        color: #000;
+        text-decoration: underline;
+        margin-bottom: 5px;
+  
+        &:hover {
+          text-decoration: none;
+        }
+      }
+  
+      @media (min-width: 769px) {
+        flex-direction: row; /* Links in a single row for large screens */
+        gap: 20px; /* Add space between links */
+        margin-bottom: 0;
+      }
+    }
+  
+    .footer-copyright {
+      color: #000;
+      text-align: right;
+  
+      @media (max-width: 768px) {
+        text-align: left; /* Left-align for small screens */
+        margin-top: 10px; /* Add space between links and copyright */
+      }
+    }
+  }
+  

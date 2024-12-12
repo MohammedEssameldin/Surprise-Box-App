@@ -1,0 +1,187 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      <img src="assets/images/logo.png" alt="Logo" style="height: 40px;" />
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row class="main-row">
+    <ion-col size-md="8" size-xl="7" size="12">
+      <form [formGroup]="subscriptionForm" >
+        <div class="form-container">
+          <h2 class="header-title">Subscribe</h2>
+          <p class="sub-title">to our Monthly Surprise Box</p>
+
+          <hr class="header-line" />
+
+          <!-- Name Field -->
+          <h3>Contact Information</h3>
+          <div class="form-field">
+            <div class="field-label">Your Name</div>
+            <ion-item class="custom-field" lines="full">
+              <ion-input formControlName="name" placeholder="e.g. Osama Alshathri"></ion-input>
+            </ion-item>
+          </div>
+          <p class="error-msg" *ngIf="subscriptionForm.get('name')?.invalid && subscriptionForm.get('name')?.touched">
+            Name is required.
+          </p>
+
+          <!-- Email Field -->
+          <div class="form-field">
+            <div class="field-label">Email</div>
+            <ion-item class="custom-field" lines="full">
+              <ion-input type="email" formControlName="email" placeholder="Osama@gmail.com"></ion-input>
+            </ion-item>
+          </div>
+          <p class="error-msg" *ngIf="subscriptionForm.get('email')?.invalid && subscriptionForm.get('email')?.touched">
+            Valid email is required.
+          </p>
+
+          <!-- Child's Information -->
+          <h3>Child's Information</h3>
+          <div class="form-field">
+            <div class="field-label">Child's Full Name</div>
+            <ion-item class="custom-field" lines="full">
+              <ion-input formControlName="childName" placeholder="e.g. Sarah Mohammad"></ion-input>
+            </ion-item>
+          </div>
+          <p class="error-msg"
+            *ngIf="subscriptionForm.get('childName')?.invalid && subscriptionForm.get('childName')?.touched">
+            Child's name is required.
+          </p>
+
+          <ion-row>
+            <ion-col size="4">
+              <div class="form-field">
+                <div class="field-label">Day</div>
+                <ion-item class="custom-field" lines="full">
+                  <ion-select formControlName="day" placeholder="Select Day">
+                    <ion-select-option *ngFor="let day of daysInMonth" [value]="day">{{ day }}</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </div>
+            </ion-col>
+
+            <ion-col size="4">
+              <div class="form-field">
+                <div class="field-label">Month</div>
+                <ion-item class="custom-field" lines="full">
+                  <ion-select (ionChange)="onMonthChange()" formControlName="month" placeholder="Select Month">
+                    <ion-select-option *ngFor="let month of months" [value]="month">{{ month }}</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </div>
+            </ion-col>
+
+            <ion-col size="4">
+              <div class="form-field">
+                <div class="field-label">Year</div>
+                <ion-item class="custom-field" lines="full">
+                  <ion-select (ionChange)="onYearChange()" formControlName="year" placeholder="Select Year">
+                    <ion-select-option *ngFor="let year of years" [value]="year">{{ year }}</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <!-- Grade Field -->
+          <div class="form-field">
+            <div class="field-label">Grade</div>
+            <ion-item class="custom-field" lines="full">
+              <ion-input formControlName="grade" placeholder="e.g. Grade 2"></ion-input>
+            </ion-item>
+          </div>
+
+          <!-- Gender Field -->
+          <h4>Gender</h4>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6" *ngFor="let option of genderOptions; let i = index"
+              [ngClass]="{
+                'align-left': i === 0, 
+                'align-right': i === 1
+              }">
+                <div class="gender-button" [ngClass]="{
+                    'gender-selected': option.selected,
+                    'gender-unselected': !option.selected
+                  }" (click)="onGenderSelect(option, i)" [attr.formControlName]="'gender'">
+                  <span>{{ option.label }}</span>
+                  <ion-icon name="checkmark-circle-outline" slot="end"></ion-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+          <!-- Topics Selection -->
+          <h4>As a parent, select any 3 topics</h4>
+          <ion-grid>
+            <ion-row>
+              <ion-col  *ngFor="let topic of topics; let i = index">
+                <ion-button expand="block" fill="outline" [ngClass]="{
+                'topic-selected': topic.selected,
+                'topic-unselected': !topic.selected
+              }" (click)="onTopicSelect(topic, $event, i)">
+                  {{ topic.name }}
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+          <!-- Submit Button -->
+          <ion-button class="payment-btn" *ngIf="!isSmallScreen" 
+            [disabled]="subscriptionForm.invalid">
+            Continue to payment
+          </ion-button>
+        </div>
+      </form>
+    </ion-col>
+
+    <ion-col >
+      <!-- Summary Section -->
+<div class="summary-container">
+  <h3>Summary</h3>
+  <p>of your Monthly Surprise Box</p>
+  
+  <div class="summary-card">
+    <div class="summary-item">
+      <p class="summary-title">Mystery Box</p>
+      <p class="summary-price">SAR 456</p>
+    </div>
+    <div class="summary-item">
+      <p class="summary-title">x1</p>
+      <p class="summary-subtitle">Monthly</p>
+    </div>
+  </div>
+  
+  <div class="summary-pricing">
+    <div class="summary-item">
+      <p class="summary-title">Subtotal</p>
+      <p class="summary-price">SAR 456</p>
+    </div>
+    <div class="summary-item">
+      <p class="summary-title">Shipping</p>
+      <p class="summary-price">Free</p>
+    </div>
+    <div class="summary-item">
+      <p class="summary-title">Taxes</p>
+      <p class="summary-price">SAR 4.0</p>
+    </div>
+    <hr class="summary-divider">
+    <div class="summary-item">
+      <p class="summary-title total-title">Total</p>
+      <p class="summary-price total-price">SAR 460</p>
+    </div>
+  </div>
+</div>
+
+    </ion-col>
+
+    <ion-button class="payment-btn" *ngIf="isSmallScreen" 
+      [disabled]="subscriptionForm.invalid">
+      Continue to payment
+    </ion-button>
+  </ion-row>
+</ion-content>

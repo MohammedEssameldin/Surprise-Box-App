@@ -1,0 +1,254 @@
+.main-row {
+    width: 80%;
+    margin: 40px auto;
+    border-radius: 20px;
+    border: 1px solid #bfb8d7;
+    min-width: 320px;
+    ion-col {
+        padding: 0 !important;
+    }
+}
+
+.header-title {
+    font-size: 24px;
+    color: #202124;
+    line-height: 32px;
+}
+
+.sub-title {
+    font-size: 16px;
+    color: #202124;
+    line-height: 24px; /* Slight gray for subtitle */
+}
+
+.form-container {
+    padding: 24px;
+    h3 {
+        margin-left: 5px;
+    }
+}
+
+.topic-selected {
+    --background: #f4f1fe;
+    --color: var(--ion-color-primary);
+    --border-color: #6633ff;
+    --border-radius: 30px;
+    --border-width: 1px;
+    width: fit-content;
+}
+
+.topic-unselected {
+    --background: transparent;
+    --color: #667085;
+    --border-color: #e1e3e6;
+    --border-radius: 30px;
+    --border-width: 1px;
+    width: fit-content;
+}
+
+.continue-button {
+    background-color: #5c6bc0; /* Purple button */
+}
+.gender-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+}
+
+.gender-selected {
+    background: #f4f1fe;
+    --color: var(--ion-color-primary);
+    border-color: #6633ff;
+    border-radius: 8px;
+    border-width: 1px;
+    width: 98%;
+    ion-icon {
+        color: var(--ion-color-primary);
+    }
+}
+
+.gender-unselected {
+    background: transparent;
+    color: #667085;
+    border-color: #e1e3e6;
+    border-radius: 8px;
+    border-width: 1px;
+    width: 98%;
+}
+
+.gender-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+.align-left {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+}
+
+/* Right-aligned gender button */
+.align-right {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+}
+
+ion-icon {
+    font-size: 20px;
+}
+.header-line {
+    border: none;
+    border-top: 1px solid #d1c5fb;
+    margin: 0 0 15px 0;
+}
+.custom-field {
+    border: 1px solid #d0d5dd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 16px;
+    margin-left: 5px;
+}
+.field-label {
+    font-size: 14px;
+    color: #202124;
+    margin-bottom: 8px;
+    line-height: 20px;
+    margin-left: 5px;
+}
+.error-msg {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.payment-btn {
+    --background: white;
+    --border-width: 1px;
+    --color: #896af9;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: none;
+    box-shadow: 4px 4px 0px 1px #896af9;
+    --background-hover: #896af9;
+    --background-activated: #ccbefd;
+    --background-focused: #896af9;
+    --color-hover: white;
+    --color-activated: #896af9;
+    --color-focused: #896af9;
+    width: 100%;
+    --border-color: #896af9;
+    --border-style: solid;
+    --border-radius: 8px;
+    margin-top: 48px;
+}
+// Summary container styling
+.summary-container {
+    background-color: #f1f1ff;
+    border-radius: 0 20px 20px 0;
+    padding: 24px;
+    height: 100%;
+
+    h3 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #202124;
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #202124;
+        line-height: 24px;
+        margin-bottom: 8px;
+    }
+
+    // Card holding the items like Mystery Box
+    .summary-card {
+        padding: 24px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 16px;
+
+        // Each summary item, such as "Mystery Box", "Subtotal", etc.
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            .summary-title {
+                font-size: 16px;
+                font-weight: bold;
+                color: #202124;
+            }
+
+            .summary-price {
+                font-size: 16px;
+                color: #202124;
+            }
+
+            .summary-subtitle {
+                font-size: 14px;
+                color: #7d7d7d;
+            }
+        }
+    }
+
+    // Divider between items
+    .summary-divider {
+        border: none;
+        border-top: 1px solid #d1c5fb;
+        margin: 16px 0;
+    }
+
+    // Total styling
+    .total-title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .total-price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #5c6bc0;
+    }
+
+    // Styling for the label and price in summary items to align them properly
+    .summary-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; // Ensures both the label and price are vertically aligned
+    }
+
+    .summary-title {
+        font-size: 16px;
+        color: #202124;
+    }
+
+    .summary-price {
+        font-size: 16px;
+        color: #202124;
+    }
+
+    .summary-subtitle {
+        font-size: 14px;
+        color: #7d7d7d;
+    }
+
+    // Specific styles for "Total" to make it stand out
+    .total-title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .total-price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #5c6bc0;
+    }
+
+    // Adjusting last item's margin to remove unnecessary space
+    .summary-item:last-child {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      <img src="assets/images/logo.png" alt="Logo" style="height: 40px;" />
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="title-div">
+    <div class="title-content-div">
+      <h1>Discover the magic of our surprise box</h1>
+      <p>
+        Unleash your child's curiosity with our educational subscription box filled with fun and learning.
+      </p>
+    </div>
+    <ion-button mode="ios" class="subscribe-btn" (click)="goToSubscription()">Subscribe Now</ion-button>
+
+    <img src="assets/images/box.png" loading="lazy" alt="Box Image" />
+  </div>
+
+  <div class="how-it-works">
+    <p class="discover-txt">
+      Discover
+    </p>
+    <h2>How It Works: Subscribe and Receive Your Surprise Box</h2>
+    <p class="subscrip-tite">
+      Subscribe to our surprise subscription box and give your child the gift of learning. Each month, we curate a box
+      filled with educational materials tailored to your child's age and interests.
+    </p>
+
+    <div class="steps">
+      <ion-row class="step-row">
+        <!-- Iterate through the steps array using ngFor -->
+        <ion-col size="12" size-md="4" *ngFor="let step of steps">
+          <div>
+
+            <!-- Display Icon and Step Number -->
+            <img [src]="step.imagePath" class="step-image" />
+            <h3>{{ step.stepNumber }}: </h3>
+            <h3>
+              {{ step.title }}
+            </h3>
+            <p>{{ step.description }}</p>
+          </div>
+        </ion-col>
+
+      </ion-row>
+      <ion-button mode="ios" class="subscribe-btn" (click)="goToSubscription()">Subscribe Now</ion-button>
+
+    </div>
+  </div>
+
+
+
+
+</ion-content>
+  <ion-footer class="app-footer">
+    <div class="footer-container">
+      <hr class="footer-line" />
+      <div class="footer-content">
+        <!-- Links Section -->
+        <div class="footer-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-service">Terms of Service</a>
+          <a href="/cookie-settings">Cookie Settings</a>
+        </div>
+        <!-- Copyright Section -->
+        <div class="footer-copyright">
+          &copy; 2023 Relume. All rights reserved.
+        </div>
+      </div>
+    </div>
+  
+</ion-footer>
